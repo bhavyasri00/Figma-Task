@@ -1,0 +1,106 @@
+/* Outer wrapper to center the box */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #19191b;
+  font-family: "Inter", sans-serif;
+}
+
+/* Box styling */
+.contact-box {
+  position: relative;
+  background-color: #1f1f21;
+  color: white;
+  padding: 4rem 2rem 3rem 2rem; /* top right bottom left */
+  width: 100%;
+  max-width: 900px;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Inner content layout */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Left side */
+.contact-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Right side */
+.contact-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #00bfff;
+  color: #19191b;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #19191b;
+}
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 1rem;
+  }
+
+  .plus-icon {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

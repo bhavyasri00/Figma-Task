@@ -1,0 +1,150 @@
+.portfolio {
+  background-color: #19191b;
+  color: white;
+  padding: 4rem 2rem;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.circle-group {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle.overlap {
+  left: 10px;
+  top: 10px;
+}
+
+/* Desktop layout */
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  position: relative;
+}
+
+.mockup {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  max-width: 320px;
+  flex: 1;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.mockup:nth-child(1) {
+  top: 0;
+}
+
+.mockup:nth-child(2) {
+  top: 30px;
+}
+
+.mockup:nth-child(3) {
+  top: 60px;
+}
+.mockup:hover {
+  transform: translateY(-4px);
+}
+
+.mockup img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Dot indicator */
+.dot-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #7c3aed;
+  border-radius: 50%;
+  margin: 2rem auto 0;
+}
+
+/* Mobile carousel */
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+
+  .carousel-track img {
+    min-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .arrow-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .arrow {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .arrow:hover {
+    background-color: #4f46e5;
+    transform: scale(1.05);
+  }
+}
